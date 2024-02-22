@@ -14,8 +14,10 @@
   
       <div v-if="meals.length > 0" class="meal-cards">
         <div v-for="(meal, index) in displayedMeals" :key="index" class="meal-card">
-          <img :src="meal.strMealThumb" :alt="meal.strMeal" />
+          <router-link :to="{ name: 'MealDetail', params: { id: meal.idMeal }}">
+          <img :src="meal.strMealThumb" alt="Meal Thumbnail" class="meal-image" />
           <h3>{{ meal.strMeal }}</h3>
+        </router-link>
         </div>
       </div>
   
