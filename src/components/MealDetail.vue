@@ -50,6 +50,8 @@ export default {
 
 .meal-image {
   width: 300px;
+  height: 200px; /* Ajustez la hauteur pour s'adapter à votre mise en page */
+  object-fit: cover; /* Pour maintenir les proportions */
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -67,4 +69,58 @@ export default {
 .back-link:hover {
   background-color: #0056b3;
 }
+.category-detail {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .category-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  
+  .category-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meal-list {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .meal-image {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin-right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+
+
 </style>
