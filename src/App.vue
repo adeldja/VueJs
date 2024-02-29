@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/categorieList">About</router-link>
+    <router-link to="/CategorieView">Liste des catégories</router-link> |
+    <router-link to="/SearchMeals">Exporter ça liste de course</router-link>
   </nav>
   <router-view/>
 </template>

@@ -1,10 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <h1>
+    Toutes les catégories 
+  </h1>
   <MealListcategorie/>
 </template>
 
 <script>
 import MealListcategorie from '../components/MealListcategorie.vue';
+export default {
+  name: 'CategorieView',
+  components: {
+    MealListcategorie,
+  },
+};
 </script>
