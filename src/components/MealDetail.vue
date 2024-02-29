@@ -3,6 +3,13 @@
     <h2>Détails du plat</h2>
     <div v-if="meal" class="meal-info">
       <h3>{{ meal.strMeal }}</h3>
+      <div class="slider-container">
+        <div class="slider">
+          <div v-for="(ingredient, index) in mealIngredients" :key="index" class="slide">
+            <p>{{ ingredient }}</p>
+          </div>
+        </div>
+      </div>
       <img :src="meal.strMealThumb" :alt="meal.strMeal" class="meal-image" />
       <p>{{ meal.strInstructions }}</p>
     </div>
@@ -31,8 +38,27 @@ export default {
 
     onMounted(fetchMealDetail);
 
+    const mealIngredients = ref([]);
+
+    onMounted(() => {
+      if (meal.value) {
+        const ingredients = [];
+        for (let i = 1; i <= 20; i++) {
+          const ingredientKey = `strIngredient${i}`;
+          const measureKey = `strMeasure${i}`;
+          const ingredient = meal.value[ingredientKey];
+          const measure = meal.value[measureKey];
+          if (ingredient) {
+            ingredients.push(`${measure} ${ingredient}`);
+          }
+        }
+        mealIngredients.value = ingredients;
+      }
+    });
+
     return {
-      meal
+      meal,
+      mealIngredients
     };
   }
 };
@@ -69,58 +95,22 @@ export default {
 .back-link:hover {
   background-color: grey;
 }
-.category-detail {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .category-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-  }
-  
-  .category-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .meal-list {
-    margin-top: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  .meal-image {
-    width: 100px;
-    border-radius: 5px;
-  }
-  
-  .pagination {
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    margin-right: 5px;
-    background-color: grey;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .pagination button:hover {
-    background-color: grey;
-  }
 
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  flex: 0 0 auto;
+  padding: 10px;
+}
 
 </style>
