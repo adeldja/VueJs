@@ -122,7 +122,7 @@ export default {
 .category-card button {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: grey;
   color: white;
   border: none;
   cursor: pointer;
@@ -130,7 +130,7 @@ export default {
 }
 
 .category-card button:hover {
-  background-color: #0056b3;
+  background-color: grey;
 }
 
 .category-detail {
@@ -177,7 +177,7 @@ export default {
 .pagination button {
   margin: 0 5px;
   padding: 5px 10px;
-  background-color: #007bff;
+  background-color: grey;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -185,6 +185,6 @@ export default {
 }
 
 .pagination button:hover {
-  background-color: #0056b3;
+  background-color: grey;
 }
 </style>

@@ -144,7 +144,7 @@
   
   .search-meals button {
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: grey;
     color: white;
     border: none;
     border-radius: 5px;
@@ -152,7 +152,7 @@
   }
   
   .search-meals button:hover {
-    background-color: #0056b3;
+    background-color: grey;
   }
   
   .meal-list {

@@ -58,7 +58,7 @@ export default {
 
 .back-link {
   display: inline-block;
-  background-color: #007bff;
+  background-color: grey;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -67,7 +67,7 @@ export default {
 }
 
 .back-link:hover {
-  background-color: #0056b3;
+  background-color: grey;
 }
 .category-detail {
     text-align: center;
@@ -110,7 +110,7 @@ export default {
   
   .pagination button {
     margin-right: 5px;
-    background-color: #007bff;
+    background-color: grey;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -119,7 +119,7 @@ export default {
   }
   
   .pagination button:hover {
-    background-color: #0056b3;
+    background-color: grey;
   }
 
 
